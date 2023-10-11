@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" style="margin-left: 20px;" (click)="back()">
+      Back
+    </ion-buttons>
+    <ion-title size="medium">{{ labelText }}</ion-title>
+    <ion-buttons slot="end" style="margin-right: 20px;" (click)="save()">
+      Save
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div style="padding: 25px;">
+    <ion-textarea 
+      label="ToDo Text"  
+      labelPlacement="floating" 
+      fill="outline" 
+      placeholder="Enter text" 
+      [autoGrow]="true" 
+      [counter]="true" 
+      [(ngModel)]="toDo"
+      autofocus="true"
+      maxlength="100">
+    </ion-textarea>
+  </div>
+</ion-content>
